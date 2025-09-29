@@ -19,6 +19,8 @@ public class LoginTest extends BaseSetup {
                     loaded = inventory.waitUntilLoaded(3);
                     Assert.assertTrue(loaded, "Inventory should need more time to load for performance_glitch_user with extended timeout");
                     long loadTimeMs = inventory.getLoadTimeMs();
+
+            System.out.println("[Login] Load wait took ~" + loadTimeMs + " ms");
                     Assert.assertTrue(loadTimeMs > 3000, "Inventory should need more time to load for performance_glitch_user with extended timeout");
                     break;
 
