@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SauceDemo Suite" verbose="1" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="pom.common.TestListener"/>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="org.testng.reporters.XMLReporter"/>
+    </listeners>
+
+    <test name="Login Tests - Chrome">
+        <parameter name="browserType" value="chrome"/>
+        <parameter name="appURL" value="https://www.saucedemo.com/"/>
+        <classes>
+            <class name="pom.test.LoginTest"/>
+            <class name="pom.test.CheckoutTest"/>
+        </classes>
+    </test>
+
+    <test name="Login Tests - Firefox">
+        <parameter name="browserType" value="firefox"/>
+        <parameter name="appURL" value="https://www.saucedemo.com/"/>
+        <classes>
+            <class name="pom.test.LoginTest"/>
+            <class name="pom.test.CheckoutTest"/>
+        </classes>
+    </test>
+
+</suite>

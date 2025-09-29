@@ -1,0 +1,41 @@
+# Maven build
+/target/
+/out/
+
+# Test reports
+/test-output/
+/surefire-reports/
+/failsafe-reports/
+/allure-results/
+/allure-report/
+/extent-report/
+/target/screenshots/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+
+# VS Code
+.vscode/
+
+# Mac & Windows cache
+*.swp
+*.swo
+
+# Local configs
+*.properties.local
+*.env
