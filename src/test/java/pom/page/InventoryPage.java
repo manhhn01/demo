@@ -25,6 +25,7 @@ public class InventoryPage {
     }
 
     public long getLoadTimeMs() {
+      System.out.println("[InventoryPage] debug" + startNano + " ms");
       if(loadTimeMs == 0) {
         WebUI.waitForElementVisible(inventoryContainer);
         long end = System.nanoTime();
