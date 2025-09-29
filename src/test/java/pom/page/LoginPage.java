@@ -27,7 +27,8 @@ public class LoginPage {
         enterUsername(user);
         enterPassword(pass);
         submit();
-        return new InventoryPage();
+        long startNano = System.nanoTime();
+        return new InventoryPage(startNano);
     }
 
     public boolean isErrorVisible() {
