@@ -16,10 +16,10 @@ public class LoginTest extends BaseSetup {
             boolean loaded;
             switch (variant) {
                 case "PERF":
+                    loaded = inventory.waitUntilLoaded(3);
+                    Assert.assertTrue(loaded, "Inventory should need more time to load for performance_glitch_user with extended timeout");
                     long loadTimeMs = inventory.getLoadTimeMs();
                     Assert.assertTrue(loadTimeMs > 3000, "Inventory should need more time to load for performance_glitch_user with extended timeout");
-                    // loaded = inventory.waitUntilLoaded(3);
-                    // Assert.assertTrue(loaded, "Inventory should need more time to load for performance_glitch_user with extended timeout");
                     break;
 
                 case "VISUAL":
